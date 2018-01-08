@@ -290,9 +290,9 @@ Content-Language: en
 ----
 
 [#service-endpoint-specification]
-=== Members Of A Service Discovery Object
+=== Service Specification Object
 
-A service discovery object *MUST* contain the following members.
+A service specification object *MUST* contain the following members.
 
 `description`::
   (string) A short, human-readable summary of the fortune heuristic
