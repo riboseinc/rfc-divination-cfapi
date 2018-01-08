@@ -23,7 +23,7 @@ Gabriel Destiny; Charise Luck
 :fullname_2: Charise Luck
 :forename_initials_2: C.
 :organization_2: Divination Inc.
-:email: charise.luck@example.com
+:email_2: charise.luck@example.com
 :street_2: 9288 N Divine Street
 :city_2: Dunn
 :code_2: 28334
@@ -60,10 +60,13 @@ clients or to an end-user.
 
 == Conventions Used in This Document
 
-The key words "**MUST**", "**MUST NOT**", "**REQUIRED**", "**SHALL**",
-"**SHALL NOT**", "**SHOULD**", "**SHOULD NOT**", "**RECOMMENDED**",
-"**MAY**", and "**OPTIONAL**" in this document are to be interpreted
-as described in <<RFC2119>>.
+The key words "*MUST*", "*MUST NOT*", "*REQUIRED*", "*SHALL*",
+"*SHALL NOT*", "*SHOULD*", "*SHOULD NOT*", "*RECOMMENDED*",
+"*NOT RECOMMENDED*", "*MAY*", and "*OPTIONAL*" in this document
+are to be interpreted as described in BCP 14 <<RFC2119>> <<RFC8174>>
+when, and only when, they appear in all capitals, as shown here.
+
+The following definitions apply in this document:
 
 Well-known URI:: This specification makes use of the "well-known URI"
 feature of HTTP servers <<RFC5785>> to provide a bootstrapping URI for
@@ -78,7 +81,7 @@ with <<service-discovery>>.
 A well-known URI called "fortune" is registered by this specification
 for fortune heuristics services (see <<iana>>).
 
-Services complying with this document **SHOULD** have its well-known
+Services complying with this document *SHOULD* have its well-known
 URI pointing (directly or through redirection) to the Root of Fortune.
 
 The Root of Fortune can be used by the client for service discovery,
@@ -87,15 +90,15 @@ available on the server, as specified in <<service-discovery>>.
 
 === Well-Known URI Redirection
 
-Servers **MUST** redirect HTTP requests for that resource to the
+Servers *MUST* redirect HTTP requests for that resource to the
 actual "context path" using one of the available mechanisms provided
 by HTTP <<RFC7230>> (e.g., using a 301, 303, or 307 response).
 
-Clients **MUST** handle HTTP redirects on the well-known URI.
+Clients *MUST* handle HTTP redirects on the well-known URI.
 
 === Well-Known URI Cache Behavior
 
-Servers **SHOULD** set an appropriate Cache-Control header value (as
+Servers *SHOULD* set an appropriate Cache-Control header value (as
 according to <<RFC7234,5.2 of>>) in the redirect response to set
 caching behavior as required by the type of response generated.
 
@@ -103,7 +106,7 @@ caching behavior as required by the type of response generated.
 ////
 
 Given available service paths may differ from user to user, the server
-**MAY** require authentication when a client tries to access the
+*MAY* require authentication when a client tries to access the
 ".well-known" URI (i.e., the server would return a 401 status response
 to the unauthenticated request from the client, then return the
 redirect response only after a successful authentication by the
@@ -130,8 +133,8 @@ This specification defines two new HTTP methods: "SEEK" and "DIVINE"
 methods for HTTP <<RFC7230>>.
 
 While HTTP GET requests are treated equivalently as the "SEEK" and
-"DIVINE" requests, its usage is discouraged and therefore **SHOULD
-NOT** be used.
+"DIVINE" requests, its usage is discouraged and therefore *SHOULD NOT*
+be used.
 
 Usage of these methods are defined in the sections below.
 
@@ -169,8 +172,8 @@ service discovery on types of calendar-based fortune heuristics
 available.
 
 An empty SEEK request with the "application/json" request type
-**MUST** be sent to this endpoint to retrieve the available endpoints.
-All other HTTP methods **MUST NOT** be supported at this URI.
+*MUST* be sent to this endpoint to retrieve the available endpoints.
+All other HTTP methods *MUST NOT* be supported at this URI.
 
 An example of such a response is as follows:
 
@@ -188,7 +191,7 @@ Content-Language: en
 }
 ----
 
-A service discovery object **MUST** have the following members:
+A service discovery object *MUST* have the following members:
 
 `diviners`::
   (JSON array)
@@ -201,7 +204,7 @@ A service discovery object **MUST** have the following members:
 [#service-endpoint]
 == Fortune Heuristics Service Endpoint
 
-An endpoint offering fortune heuristics services must adhere to 
+An endpoint offering fortune heuristics services must adhere to
 specifications in this section.
 
 [#endpoint-specification-request]
@@ -211,7 +214,7 @@ To retrieve capabilities and parameters of an endpoint complying with
 this specification, a service specification JSON object is returned.
 
 An empty SEEK request with the "application/json" request type
-**MUST** be sent to this endpoint to retrieve the service
+*MUST* be sent to this endpoint to retrieve the service
 specification that describes parameters accepted by this endpoint.
 
 Two examples of such a response are given below.
@@ -289,24 +292,24 @@ Content-Language: en
 [#service-endpoint-specification]
 === Members Of A Service Discovery Object
 
-A service discovery object **MUST** contain the following members.
+A service discovery object *MUST* contain the following members.
 
 `description`::
   (string) A short, human-readable summary of the fortune heuristic
-  service at this endpoint. This **SHOULD** be a stable reference.
+  service at this endpoint. This *SHOULD* be a stable reference.
 
 `details`::
   (URI, optional) A URI reference that provides further details for human
   consumption, such as API documentation that includes details of
   parameters accepted or response states.
-  
+
 `parameters`::
   (object, mandatory) An object that specifies what parameters
   are accepted by this endpoint. Each parameter key within this object
   specifies an accepted parameter name, and its value is a parameter
   specification object, which is described below.
-  
-A parameter specification object **SHOULD** contain the following
+
+A parameter specification object *SHOULD* contain the following
 members:
 
 `type`::
@@ -319,7 +322,7 @@ members:
 
 `values`::
   (object, optional) The accepted values of this parameter, unlisted
-  values **SHOULD** not be accepted by the parameter. Each key within
+  values *SHOULD* not be accepted by the parameter. Each key within
   this object specifies an accepted value, and its value provides a
   description of the purpose of the value.
 
@@ -331,10 +334,10 @@ members:
 === Fortune Heuristics Report Request
 
 A request using the HTTP "DIVINE" method and the "application/json"
-type **MUST** be sent to the fortune heuristic endpoint to retrieve
+type *MUST* be sent to the fortune heuristic endpoint to retrieve
 results for a fortune heuristic query.
 
-The request made **MUST** conform to the specifications of the
+The request made *MUST* conform to the specifications of the
 endpoint, as retrieved via the "SEEK" method described in
 <<endpoint-specification-request>>.
 
@@ -362,10 +365,10 @@ Content-Language: en
 A fortune heuristic query using the "DIVINE" method triggers a
 response that contains a fortune heuristics report.
 
-A successful response returns a JSON object that **MUST** conform
+A successful response returns a JSON object that *MUST* conform
 to the object structure described in this section.
 
-A report object **SHOULD** contain the following members:
+A report object *SHOULD* contain the following members:
 
 `type`::
   (URI, mandatory) A URI that defines the type of the report located
@@ -408,7 +411,7 @@ Content-Language: en
             "category":
               "https://divine.example.com/astrology/categories/love"
             "value": 70,
-            "description": 
+            "description":
               "Give a certain person or situation another try!"
           },
           {
@@ -441,7 +444,7 @@ Content-Language: en
         "dateEnd": "2018-03-28T02:45:03",
         "description": "Communication planet Mercury enters your sign,
           which will find you in a busier and chattier mood.",
-        "recommendation": 
+        "recommendation":
           "Take charge of work with your newfound energy."
       }
       "..."
@@ -456,7 +459,7 @@ Content-Language: en
 The `intervals` value of a report object contains a number of report
 intervals -- each representing a non-overlapping period of the
 selected interval length. When all of these intervals are put
-together, the combined period **MUST** fully cover the requested
+together, the combined period *MUST* fully cover the requested
 report target period.
 
 An example interval object is shown below.
@@ -490,7 +493,7 @@ An example interval object is shown below.
 }
 ----
 
-An interval object **MUST** contain the following members:
+An interval object *MUST* contain the following members:
 
 `dateStart`::
   (datetime, mandatory) This value specifies the start of the period
@@ -502,7 +505,7 @@ An interval object **MUST** contain the following members:
 
 In the given example, the `categories` key is an implementation
 specific object that details heuristic results returned by the
-selected algorithm. This **MAY** differ in different algorithms.
+selected algorithm. This *MAY* differ in different algorithms.
 
 
 [#endpoint-report-event-obj]
@@ -511,11 +514,11 @@ selected algorithm. This **MAY** differ in different algorithms.
 The `events` value of a report object contains a number of event
 objects. Each event object represents an event relevant to the
 calculation of fortune heuristics during a target report period. These
-events **MAY** be of variable time lengths, and **MAY** be overlapping
+events *MAY* be of variable time lengths, and *MAY* be overlapping
 amongst each other.
 
 An event, for example, may represent when a significant event relevant
-to the 
+to the
 
 // Two event objects
 [source,json]
@@ -537,7 +540,7 @@ to the
 }
 ----
 
-Similar to an interval object, an event object **MUST** contain the
+Similar to an interval object, an event object *MUST* contain the
 following members:
 
 `dateStart`::
@@ -549,7 +552,7 @@ following members:
   described by the event.
 
 In the given example, the keys `description` and `recommendation`
-are implementation-specific details. This **MAY** differ in different
+are implementation-specific details. This *MAY* differ in different
 algorithms.
 
 
@@ -559,7 +562,7 @@ algorithms.
 This specification makes use of normal HTTP error codes with the following
 extensions.
 
-Errors **MUST** be returned using the Problem JSON Structure as
+Errors *MUST* be returned using the Problem JSON Structure as
 accordance with <<RFC7807>>.
 
 These generation errors Examples of generation errors:
@@ -574,7 +577,7 @@ These generation errors Examples of generation errors:
 473 Beyond Existing Capability::
   The service determines that the outcome is too difficult to predict. For
   example, in the case where the calculation is too complex to complete in a
-  certain time period. The service **SHOULD** issue this response code to
+  certain time period. The service *SHOULD* issue this response code to
   indicate that the client should not try the same request again.
 
 474 Outcome Impossible::
@@ -587,18 +590,18 @@ These generation errors Examples of generation errors:
 [#security]
 == Security Considerations
 
-* TLS <<RFC5246>> and authenticated HTTP requests should be used to 
+* TLS <<RFC5246>> and authenticated HTTP requests should be used to
 protect the DIVINE request and responses due to the personal nature
 of information transmitted.
 
-* A client **SHOULD** verify the identity of the server on every
+* A client *SHOULD* verify the identity of the server on every
 request to prevent impersonation or man-in-the-middle attacks, as data
 transmitted to and from the server is sensitive information, and at
 times critical information to the user.
 
-* Synchronization of client and server time **MUST** be
+* Synchronization of client and server time *MUST* be
 well-considered in the implementation of this specification. A
-mismatch of client and server time **MAY** lead to algorithm
+mismatch of client and server time *MAY* lead to algorithm
 miscalculations that can cause mistaken choices of a user that depends
 on the reliability of this system.
 
