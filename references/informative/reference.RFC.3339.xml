@@ -1,4 +1,5 @@
-<reference  anchor='RFC3339' target='https://www.rfc-editor.org/info/rfc3339'>
+<reference  anchor='RFC3339' 
+  target='https://www.rfc-editor.org/info/rfc3339'>
   <front>
     <title>Date and Time on the Internet: Timestamps</title>
     <author initials='G.' surname='Klyne' fullname='G. Klyne'>
