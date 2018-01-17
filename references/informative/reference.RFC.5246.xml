@@ -1,4 +1,4 @@
-<reference  anchor='RFC5246' 
+<reference anchor='RFC5246' 
   target='https://www.rfc-editor.org/info/rfc5246'>
   <front>
     <title>The Transport Layer Security (TLS) Protocol 

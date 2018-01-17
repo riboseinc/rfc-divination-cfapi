@@ -1,4 +1,4 @@
-<reference  anchor='RFC8259' 
+<reference anchor='RFC8259' 
   target='https://www.rfc-editor.org/info/rfc8259'>
   <front>
     <title>The JavaScript Object Notation (JSON) Data Interchange 

@@ -1,4 +1,4 @@
-<reference  anchor='RFC7234' 
+<reference anchor='RFC7234' 
   target='https://www.rfc-editor.org/info/rfc7234'>
   <front>
     <title>Hypertext Transfer Protocol (HTTP/1.1): Caching</title>
