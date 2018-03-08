@@ -1,0 +1,32 @@
+
+// tag::comments[]
+//TODO change name:
+//BELIEF: Beacons of Life, and Significant Intervals or Events in near Future
+// end::comments[]
+
+
+// TODO: rewrite the following paragraphs
+////
+-> Below "Well-Known URI Cache Behavior"
+
+Given available service paths may differ from user to user, the server
+*MAY* require authentication when a client tries to access the
+".well-known" URI (i.e., the server would return a 401 status response
+to the unauthenticated request from the client, then return the
+redirect response only after a successful authentication by the
+client).
+
+=== Example: Well-Known URI Redirects to Actual Fortune Heuristics Service Path
+
+A CalDAV server has a "context path" that is "/servlet/caldav".  The
+client will use "/.well-known/caldav" as the path for its
+"bootstrapping" process after it has first found the FQDN and port
+number via an SRV lookup or via manual entry of information by the
+user, from which the client can parse suitable information.  When the
+client makes an HTTP request against "/.well-known/caldav", the server
+would issue an HTTP redirect response with a Location response header
+using the path "/servlet/caldav".  The client would then "follow" this
+redirect to the new resource and continue making HTTP requests there
+to complete its "bootstrapping" process.
+////
+
