@@ -31,7 +31,8 @@ Gabriel Destiny; Charise Luck
 :country_2: USA
 
 //TODO change name:
-//BELIEF: Beacons of Life, and Significant Intervals or Events in near Future
+//BELIEF: Beacons of Life, and Significant Intervals or Events
+//in near Future
 
 [abstract]
 
@@ -299,8 +300,8 @@ A service specification object *MUST* contain the following members.
   service at this endpoint. This *SHOULD* be a stable reference.
 
 `details`::
-  (URI, optional) A URI reference that provides further details for human
-  consumption, such as API documentation that includes details of
+  (URI, optional) A URI reference that provides further details for
+  human consumption, such as API documentation that includes details of
   parameters accepted or response states.
 
 `parameters`::
@@ -559,8 +560,8 @@ algorithms.
 [#endpoint-report-errors]
 === Report Generation Errors
 
-This specification makes use of normal HTTP error codes with the following
-extensions.
+This specification makes use of normal HTTP error codes with the 
+following extensions.
 
 Errors *MUST* be returned using the Problem JSON Structure as
 accordance with <<RFC7807>>.
@@ -575,15 +576,16 @@ These generation errors Examples of generation errors:
 
 // TODO: change this to something else
 473 Beyond Existing Capability::
-  The service determines that the outcome is too difficult to predict. For
-  example, in the case where the calculation is too complex to complete in a
+  The service determines that the outcome is too difficult to predict. 
+  For example, in the case where the calculation is too complex to 
+  complete in a
   certain time period. The service *SHOULD* issue this response code to
   indicate that the client should not try the same request again.
 
 474 Outcome Impossible::
-  The service determines that the outcome is impossible. For example, when the
-  algorithm determines that the subject will have deceased before the start of
-  the requested target period.
+  The service determines that the outcome is impossible. For example, 
+  when the algorithm determines that the subject will have deceased 
+  before the start of the requested target period.
 
 
 
