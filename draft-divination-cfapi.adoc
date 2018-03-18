@@ -30,6 +30,10 @@ Gabriel Destiny; Charise Luck
 :region_2: NC
 :country_2: USA
 
+[.comment]
+tag::sample[]
+// tag::sample[]
+
 [abstract]
 
 This document describes a JSON HTTP API for online services that
@@ -89,6 +93,7 @@ actual "context path" using one of the available mechanisms provided
 by HTTP <<RFC7230>> (e.g., using a 301, 303, or 307 response).
 
 Clients *MUST* handle HTTP redirects on the well-known URI.
+
 
 === Well-Known URI Cache Behavior
 
@@ -170,6 +175,11 @@ A service discovery object *MUST* have the following members:
   For example, the path "/astrology" listed in the example has an
   endpoint path of "[root-of-fortune]/astrology", where
   "[root-of-fortune]" indicates the real path of the Root of Fortune.
+
+
+// end::sample[]
+[.comment]
+end::sample[]
 
 [#service-endpoint]
 == Fortune Heuristics Service Endpoint
@@ -592,6 +602,10 @@ Specification document(s)::  This document
 Related information::  N/A.
 
 
+[.comment]
+begin::sample[]
+// begin::sample[]
+
 [bibliography]
 == Normative References
 
@@ -607,6 +621,7 @@ include::references/informative/*.xml[]
 ++++
 
 
+
 [appendix]
 == Acknowledgements
 
@@ -614,3 +629,6 @@ The authors thank the following individuals for their valuable
 feedback on this specification, and commend them for making fortune
 heuristics more accessible for the benefit of mankind.
 
+// end::sample[]
+[.comment]
+end::sample[]
