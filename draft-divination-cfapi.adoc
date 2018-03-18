@@ -13,7 +13,7 @@ Gabriel Destiny; Charise Luck
 :fullname: Gabriel Destiny
 :forename_initials: G.
 :organization: Divination Inc.
-:email: gabriel.destiny@example.com
+:email: gabriel.destiny@ribose.com
 :street: 9288 N Divine Street
 :city: Dunn
 :code: 28334
@@ -23,7 +23,7 @@ Gabriel Destiny; Charise Luck
 :fullname_2: Charise Luck
 :forename_initials_2: C.
 :organization_2: Divination Inc.
-:email_2: charise.luck@example.com
+:email_2: charise.luck@ribose.com
 :street_2: 9288 N Divine Street
 :city_2: Dunn
 :code_2: 28334
@@ -533,8 +533,6 @@ following extensions.
 
 Errors *MUST* be returned using the Problem JSON Structure as
 accordance with <<RFC7807>>.
-
-These generation errors Examples of generation errors:
 
 422 Unprocessable Entity::
   For example, a malformed date-time parameter, or an illogical input,
