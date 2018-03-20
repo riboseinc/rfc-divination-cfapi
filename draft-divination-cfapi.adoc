@@ -194,7 +194,7 @@ in <<digital-oracle>>.
 
 
 [[digital-oracle]]
-.The Dimensional Eye, a digital oracle, communicating through a sole button
+.Dimensional Eye, a digital oracle that communicates through one button
 ====
 [alt=An incarnation of the Dimensional Eye, in ASCII]
 ....
@@ -486,7 +486,7 @@ interpreting a graphical divination output is provided in
 <<divination-message>>.
 
 [[divination-message]]
-.Forty-nine yarrow sticks reveals a mystical message relating to fortune
+.Forty-nine yarrow sticks reveals a mystical message on fortune
 ====
 [alt=A mystical pattern in ASCII]
 ....
