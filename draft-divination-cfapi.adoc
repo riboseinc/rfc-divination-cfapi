@@ -181,11 +181,58 @@ A service discovery object *MUST* have the following members:
 [.comment]
 end::sample[]
 
+
 [#service-endpoint]
 == Fortune Heuristics Service Endpoint
 
-An endpoint offering fortune heuristics services must adhere to
+An endpoint offering fortune heuristics services *MUST* adhere to
 specifications in this section.
+
+A service *MAY* implement multiple divination services based on
+different divination methods, such as the digital oracle shown
+in <<digital-oracle>>.
+
+
+[[digital-oracle]]
+.The Dimensional Eye, a digital oracle, communicating through a sole button
+====
+[alt=An incarnation of the Dimensional Eye, in ASCII]
+....
+                                  __
+                             __===^-\
+                        __===       -\
+                    __===-           -\
+               __===-                 -\
+         ___===-                       -\
+      ===-               ---__          -\
+      \\\              |||^^\ \__        -\
+       \\\             |||       \__      -\
+        \\\            |||    ______\_     -\
+         \\\           |||  _/-******\\__   -\
+          \\\          ||  /-****_****-\ \_  -\
+           \\\         || |-***/   \***-\  \_ -\
+            \\\        || |-***\___/***-|    \ -\
+             \\\       ||  \-*********-/  __--/ -\
+              \\\      ||    \-******/__--       -\
+               \\\     ||        __--             -\
+                \\\    ||    __--                  -\
+                 \\\   ||__--                       -\
+                  \\\                                -\
+                   \\\                                -\
+                    \\\                                -\
+                     \\\                                -\
+                      \\\                  __            -\
+                       \\\               //##\\           -\
+                        \\\              \\##//            -\
+                         \\\               ^^          __--==^
+                          \\\                    __--===
+                           \\\             __--===
+                            \\\      __--===
+                             \\\ __--==
+                              \\=
+
+....
+====
 
 [#endpoint-specification-request]
 === Service Specification Request
@@ -362,7 +409,6 @@ A report object *SHOULD* contain the following members:
   The `events` object contains an array of significant event objects
   within the target date range.
 
-
 An example of a response is provided below.
 
 [source]
@@ -432,6 +478,47 @@ Content-Language: en
   }
 }
 ----
+
+
+Fortune heuristic reports are created by a divination output that
+*MAY* requires quantitative interpretation. A sample representation of
+interpreting a graphical divination output is provided in
+<<divination-message>>.
+
+[[divination-message]]
+.Forty-nine yarrow sticks reveals a mystical message relating to fortune
+====
+[alt=A mystical pattern in ASCII]
+....
+                                    0000000000000000000000000
+        0000000000000000000000001 G 1000000000000000000000000
+        0000000000000000000000011 R 1100000000000000000000000
+        0000000000000000000000111 A 1110000000000000000000000
+        0000000000000000000001111 C 1111000000000000000000000
+        0000000000000000000011111 E 1111100000000000000000000
+        0000000000000000000111111 , 1111110000000000000000000
+        0000000000000000001111111   1111111000000000000000000
+        0000000011111111111111111 M 1111111111111111100000000
+        0000000111111111111111111 E 1111111111111111110000000
+        0000001111111111111111111 R 1111111111111111111000000
+        0000011111111111111111111 C 1111111111111111111100000
+        0000111111111111111111111 Y 1111111111111111111110000
+        0001111111111111111111111 , 1111111111111111111111000
+        0011111111111111111111111   1111111111111111111111100
+        0111111111111111111111111 A 1111111111111111111111110
+        0000000000000000011111111 N 1111111100000000000000000
+        0000000000000000111111111 D 1111111110000000000000000
+        0000000000000001111111111   1111111111000000000000000
+        0000000000000011111111111 P 1111111111100000000000000
+        0000000000000111111111111 E 1111111111110000000000000
+        0000000000001111111111111 A 1111111111111000000000000
+        0000000000011111111111111 C 1111111111111100000000000
+        0000000000111111111111111 E 1111111111111110000000000
+        0000000001111111111111111 . 1111111111111111000000000
+....
+====
+
+
 
 [#endpoint-report-interval-obj]
 === Report Interval Object
