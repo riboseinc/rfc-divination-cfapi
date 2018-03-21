@@ -13,7 +13,7 @@ Gabriel Destiny; Charise Luck
 :fullname: Gabriel Destiny
 :forename_initials: G.
 :organization: Divination Inc.
-:email: gabriel.destiny@example.com
+:email: gabriel.destiny@ribose.com
 :street: 9288 N Divine Street
 :city: Dunn
 :code: 28334
@@ -23,12 +23,16 @@ Gabriel Destiny; Charise Luck
 :fullname_2: Charise Luck
 :forename_initials_2: C.
 :organization_2: Divination Inc.
-:email_2: charise.luck@example.com
+:email_2: charise.luck@ribose.com
 :street_2: 9288 N Divine Street
 :city_2: Dunn
 :code_2: 28334
 :region_2: NC
 :country_2: USA
+
+[.comment]
+tag::sample[]
+// tag::sample[]
 
 [abstract]
 
@@ -89,6 +93,7 @@ actual "context path" using one of the available mechanisms provided
 by HTTP <<RFC7230>> (e.g., using a 301, 303, or 307 response).
 
 Clients *MUST* handle HTTP redirects on the well-known URI.
+
 
 === Well-Known URI Cache Behavior
 
@@ -171,11 +176,63 @@ A service discovery object *MUST* have the following members:
   endpoint path of "[root-of-fortune]/astrology", where
   "[root-of-fortune]" indicates the real path of the Root of Fortune.
 
+
+// end::sample[]
+[.comment]
+end::sample[]
+
+
 [#service-endpoint]
 == Fortune Heuristics Service Endpoint
 
-An endpoint offering fortune heuristics services must adhere to
+An endpoint offering fortune heuristics services *MUST* adhere to
 specifications in this section.
+
+A service *MAY* implement multiple divination services based on
+different divination methods, such as the digital oracle shown
+in <<digital-oracle>>.
+
+
+[[digital-oracle]]
+.Dimensional Eye, a digital oracle that communicates through one button
+====
+[alt=An incarnation of the Dimensional Eye, in ASCII]
+....
+                                  __
+                             __===^-\
+                        __===       -\
+                    __===-           -\
+               __===-                 -\
+         ___===-                       -\
+      ===-               ---__          -\
+      \\\              |||^^\ \__        -\
+       \\\             |||       \__      -\
+        \\\            |||    ______\_     -\
+         \\\           |||  _/-******\\__   -\
+          \\\          ||  /-****_****-\ \_  -\
+           \\\         || |-***/   \***-\  \_ -\
+            \\\        || |-***\___/***-|    \ -\
+             \\\       ||  \-*********-/  __--/ -\
+              \\\      ||    \-******/__--       -\
+               \\\     ||        __--             -\
+                \\\    ||    __--                  -\
+                 \\\   ||__--                       -\
+                  \\\                                -\
+                   \\\                                -\
+                    \\\                                -\
+                     \\\                                -\
+                      \\\                  __            -\
+                       \\\               //##\\           -\
+                        \\\              \\##//            -\
+                         \\\               ^^          __--==^
+                          \\\                    __--===
+                           \\\             __--===
+                            \\\      __--===
+                             \\\ __--==
+                              \\=
+
+....
+====
 
 [#endpoint-specification-request]
 === Service Specification Request
@@ -352,7 +409,6 @@ A report object *SHOULD* contain the following members:
   The `events` object contains an array of significant event objects
   within the target date range.
 
-
 An example of a response is provided below.
 
 [source]
@@ -422,6 +478,47 @@ Content-Language: en
   }
 }
 ----
+
+
+Fortune heuristic reports are created by a divination output that
+*MAY* requires quantitative interpretation. A sample representation of
+interpreting a graphical divination output is provided in
+<<divination-message>>.
+
+[[divination-message]]
+.Forty-nine yarrow sticks reveals a mystical message on fortune
+====
+[alt=A mystical pattern in ASCII]
+....
+                                    0000000000000000000000000
+        0000000000000000000000001 G 1000000000000000000000000
+        0000000000000000000000011 R 1100000000000000000000000
+        0000000000000000000000111 A 1110000000000000000000000
+        0000000000000000000001111 C 1111000000000000000000000
+        0000000000000000000011111 E 1111100000000000000000000
+        0000000000000000000111111 , 1111110000000000000000000
+        0000000000000000001111111   1111111000000000000000000
+        0000000011111111111111111 M 1111111111111111100000000
+        0000000111111111111111111 E 1111111111111111110000000
+        0000001111111111111111111 R 1111111111111111111000000
+        0000011111111111111111111 C 1111111111111111111100000
+        0000111111111111111111111 Y 1111111111111111111110000
+        0001111111111111111111111 , 1111111111111111111111000
+        0011111111111111111111111   1111111111111111111111100
+        0111111111111111111111111 A 1111111111111111111111110
+        0000000000000000011111111 N 1111111100000000000000000
+        0000000000000000111111111 D 1111111110000000000000000
+        0000000000000001111111111   1111111111000000000000000
+        0000000000000011111111111 P 1111111111100000000000000
+        0000000000000111111111111 E 1111111111110000000000000
+        0000000000001111111111111 A 1111111111111000000000000
+        0000000000011111111111111 C 1111111111111100000000000
+        0000000000111111111111111 E 1111111111111110000000000
+        0000000001111111111111111 . 1111111111111111000000000
+....
+====
+
+
 
 [#endpoint-report-interval-obj]
 === Report Interval Object
@@ -534,8 +631,6 @@ following extensions.
 Errors *MUST* be returned using the Problem JSON Structure as
 accordance with <<RFC7807>>.
 
-These generation errors Examples of generation errors:
-
 422 Unprocessable Entity::
   For example, a malformed date-time parameter, or an illogical input,
   such as when the subject's birthday occurs after the report target
@@ -594,6 +689,10 @@ Specification document(s)::  This document
 Related information::  N/A.
 
 
+[.comment]
+tag::sample[]
+// begin::sample[]
+
 [bibliography]
 == Normative References
 
@@ -609,6 +708,7 @@ include::references/informative/*.xml[]
 ++++
 
 
+
 [appendix]
 == Acknowledgements
 
@@ -616,3 +716,6 @@ The authors thank the following individuals for their valuable
 feedback on this specification, and commend them for making fortune
 heuristics more accessible for the benefit of mankind.
 
+// end::sample[]
+[.comment]
+end::sample[]
