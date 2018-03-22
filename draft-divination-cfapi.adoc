@@ -8,7 +8,7 @@ Gabriel Destiny; Charise Luck
 :area: Internet
 :submission-type: independent
 :intended-series: informational
-:revdate: 2018-04-01T00:00:00Z
+:revdate: 2018-03-23T00:00:00Z
 :lastname: Destiny
 :fullname: Gabriel Destiny
 :forename_initials: G.
@@ -18,7 +18,7 @@ Gabriel Destiny; Charise Luck
 :city: Dunn
 :code: 28334
 :region: NC
-:country: USA
+:country: United States of America
 :lastname_2: Luck
 :fullname_2: Charise Luck
 :forename_initials_2: C.
@@ -28,7 +28,7 @@ Gabriel Destiny; Charise Luck
 :city_2: Dunn
 :code_2: 28334
 :region_2: NC
-:country_2: USA
+:country_2: United States of America
 
 [.comment]
 tag::sample[]
