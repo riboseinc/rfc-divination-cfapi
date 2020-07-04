@@ -15,6 +15,7 @@ on:
   repository_dispatch:
     types: [ metanorma/metanorma-docker ]
 
+
 jobs:
   test-docker:
     runs-on: ubuntu-latest
