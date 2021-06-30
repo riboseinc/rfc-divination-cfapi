@@ -1,0 +1,69 @@
+/__w/rfc-divination-cfapi/rfc-divination-cfapi/site/documents/draft-divination-cfapi.err errors
+
+
+== Metanorma XML Style Warning
+
+(XML Line 000098): Hanging paragraph in clause
+	<clause id="_fortune_heuristics_service_well_known_uri" inline-header="false" obligation="normative"><title>Fortune Heuristics Service Well-Known URI</title><p id="_efce52e1-e836-4459-8d92-bb25fac9fd0e">A well-known URI called "fortune" is registered by this specification
+	for fortune heuristics services (see <xref target="iana"/>).</p>
+	<p id="_871e3ed0-18c1-46c2-a645-1728a00eb91b">Services complying with this document <bcp14>SHOULD</bcp14> have its well-known
+	URI pointing (directly or through redirection) to the Root of Fortune.</p>
+	<p id="_870f712c-f35e-423e-8d9b-f6c94fa7df22">The Root of Fortune can be used by the client for service discovery,
+(XML Line 000145): Hanging paragraph in clause
+	<clause id="service-discovery" inline-header="false" obligation="normative">
+	<title>Fortune Heuristics Service Discovery</title>
+	<clause id="root-of-fortune" inline-header="false" obligation="normative"><title>Root of Fortune Path URI ("/")</title><p id="_8c5f2631-f4ea-4df5-a00b-e346b04efa58">The Root of Fortune URI, defined as "/" in this document, is used for
+	service discovery on types of calendar-based fortune heuristics
+	available.</p>
+(XML Line 000181): Hanging paragraph in clause
+	<clause id="service-endpoint" inline-header="false" obligation="normative"><title>Fortune Heuristics Service Endpoint</title><p id="_873cd8a8-6582-48ea-b403-ed64325906a9">An endpoint offering fortune heuristics services <bcp14>MUST</bcp14> adhere to
+	specifications in this section.</p>
+	<p id="_96212696-f0bc-462f-9bd8-03adc9995442">A service <bcp14>MAY</bcp14> implement multiple divination services based on
+	different divination methods, such as the digital oracle shown
+	in <xref target="digital-oracle"/>.</p>
+(XML Line 000348): Hanging paragraph in clause
+	<clause id="endpoint-report" inline-header="false" obligation="normative"><title>Fortune Heuristics Report Request and Response</title><clause id="endpoint-report-request" inline-header="false" obligation="normative"><title>Fortune Heuristics Report Request</title><p id="_7aa39421-7260-480c-a096-efd2d8c4c91e">A request using the HTTP "DIVINE" method and the "application/json"
+	type <bcp14>MUST</bcp14> be sent to the fortune heuristic endpoint to retrieve
+	results for a fortune heuristic query.</p>
+	<p id="_4a5610b7-c57a-471a-961e-3dab3868b9cc">The request made <bcp14>MUST</bcp14> conform to the specifications of the
+	endpoint, as retrieved via the "SEEK" method described in
+(XML Line 000637): Hanging paragraph in clause
+	<clause id="iana" inline-header="false" obligation="normative">
+	<title>IANA Considerations</title>
+	<clause id="_well_known_uri_registrations" inline-header="false" obligation="normative"><title>Well-Known URI Registrations</title><p id="_2e6d06d2-b138-4476-bdfa-4091f570e890">This document defines a well-known URI using the registration
+	procedure and template from <xref target="RFC5785">5.1 of</xref>.</p>
+	<clause id="_fortune_well_known_uri_registration" inline-header="false" obligation="normative"><title>"fortune" Well-Known URI Registration</title><dl id="_49cf347c-5fbd-4937-a596-7eef38ac6c40">
+(XML Line 000639): Hanging paragraph in clause
+	<clause id="_well_known_uri_registrations" inline-header="false" obligation="normative"><title>Well-Known URI Registrations</title><p id="_2e6d06d2-b138-4476-bdfa-4091f570e890">This document defines a well-known URI using the registration
+	procedure and template from <xref target="RFC5785">5.1 of</xref>.</p>
+	<clause id="_fortune_well_known_uri_registration" inline-header="false" obligation="normative"><title>"fortune" Well-Known URI Registration</title><dl id="_49cf347c-5fbd-4937-a596-7eef38ac6c40">
+	<dt>URI suffix</dt>
+	<dd>
+
+
+== Metanorma XML Syntax
+
+(XML Line 000034:52): character content of element "revision-date" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
+(XML Line 000065:88): attribute "obligation" not allowed here; expected attribute "language", "numbered", "removeInRFC", "script" or "toc"
+(XML Line 000066:164): element "acknowledgements" not allowed here; expected the element end-tag or element "admonition", "bookmark", "clause", "dl", "example", "figure", "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "permission", "pre", "quote", "recommendation", "requirement", "review", "sourcecode", "svgmap", "table", "title" or "ul"
+(XML Line 000066:164): attribute "obligation" not allowed here; expected attribute "language", "numbered", "removeInRFC", "script" or "toc"
+(XML Line 000066:98): element "annex" not allowed here; expected the element end-tag or element "abstract", "acknowledgements", "clause", "foreword" or "introduction"
+(XML Line 000066:98): value of attribute "obligation" is invalid; must be equal to "informative" or "normative"
+(XML Line 000076:82): IDREF "RFC7230" without matching ID
+(XML Line 000078:37): IDREF "RFC8259" without matching ID
+(XML Line 000084:70): IDREF "RFC2119" without matching ID
+(XML Line 000084:95): IDREF "RFC8174" without matching ID
+(XML Line 000091:49): IDREF "RFC5785" without matching ID
+(XML Line 000110:33): IDREF "RFC7230" without matching ID
+(XML Line 000115:37): IDREF "RFC7234" without matching ID
+(XML Line 000119:42): IDREF "RFC7230" without matching ID
+(XML Line 000125:47): IDREF "RFC3339" without matching ID
+(XML Line 000133:86): IDREF "RFC3339" without matching ID
+(XML Line 000134:71): IDREF "ISO.8601-1.2018" without matching ID
+(XML Line 000594:41): IDREF "RFC7807" without matching ID
+(XML Line 000621:75): IDREF "RFC5246" without matching ID
+(XML Line 000643:52): IDREF "RFC5785" without matching ID
+(XML Line 000668:35): element "passthrough" not allowed here; expected the element end-tag or element "admonition", "bibitem", "bookmark", "dl", "example", "figure", "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "permission", "pre", "quote", "recommendation", "references", "requirement", "review", "sourcecode", "svgmap", "table" or "ul"
+(XML Line 000668:35): found attribute "formats", but no attributes allowed here
+(XML Line 000671:35): element "passthrough" not allowed here; expected the element end-tag or element "admonition", "bibitem", "bookmark", "dl", "example", "figure", "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "permission", "pre", "quote", "recommendation", "references", "requirement", "review", "sourcecode", "svgmap", "table" or "ul"
+(XML Line 000671:35): found attribute "formats", but no attributes allowed here
